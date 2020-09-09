@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    
+    <!-- Font Awesome link-->
+    <!--<script src="https://kit.fontawesome.com/5d36bcb580.js" crossorigin="anonymous"></script>-->
+
+    <!--CSS Links -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="media/media.css">
+    
+    <title>Basic jQuer</title>
+  </head>
+  <body>
+        <!--Start Home Section-->
+    <section class="main_menu">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+          <a class="navbar-brand" href="#"><img class="img-fluid" src="images/devnuralam.png" alt="DevNurAlam"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--Menu-->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto font-weight-bold">
+              <li class="nav-item px-3">
+                <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">Portfolio</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <div class="banner">
+      <h1>Hi! I'm Nur Alam</h1>
+      <h2>Full Stack developer</h2>
+    </div>
+    <!--Expertice-->
+    <section class="expertice py-5">
+      <div class="container">
+        <h2 class="text-center w-50 border border-dark mt-5 py-3 text-white font-weight-bold mx-auto">My Expertice</h2>
+        <div class="row">
+          <div class="expert-single col-lg-3 col-md-6 col-sm-12">
+            <div class="circleGraphic1" style="color: transparent;">85</div>
+            <p class="text-center text-white pt-5">Web Design</p>
+          </div>
+          <div class="expert-single col-lg-3 col-md-6 col-sm-12">
+            <div class="circleGraphic2" style="color: transparent;">67</div>
+            <p class="text-center text-white pt-5">Web Development</p>
+          </div>
+          <div class="expert-single col-lg-3 col-md-6 col-sm-12">
+            <div class="circleGraphic3" style="color: transparent;">65</div>
+            <p class="text-center text-white pt-5">WordPress</p>
+          </div>
+          <div class="expert-single col-lg-3 col-md-6 col-sm-12">
+            <div class="circleGraphic4" style="color: transparent;">89</div>
+            <p class="text-center text-white pt-5">Theme Customization</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Expertice-->
+    <!--Portfolio-->
+    <div class="container">
+      <h2 class="text-center w-50 border border-dark mt-5 py-3 text-dark font-weight-bold mx-auto">See What I Have Done</h2>
+      <div class="portfolio-menu text-center py-5">
+        <ul>
+          <li class="active" data-filter="*">All</li>
+          <li data-filter=".web">Web Design</li>
+          <li data-filter=".wordpress">WordPress</li>
+          <li data-filter=".optimization">Optimization</li>
+        </ul>
+      </div>
+      <div class="portfolio-item align-items-center">
+        <div class="item web">
+          <img src="images/1.png" alt="">
+        </div>
+        <div class="item wordpress">
+          <img src="images/2.png" alt="">
+        </div>
+        <div class="item optimization">
+          <img src="images/3.png" alt="">
+        </div>
+        <div class="item optimization">
+          <img src="images/4.png" alt="">
+        </div>
+        <div class="item wordpress">
+          <img src="images/5.png" alt="">
+        </div>
+        <div class="item web">
+          <img src="images/6.png" alt="">
+        </div>
+        <div class="item web">
+          <img src="images/7.png" alt="">
+        </div>
+        <div class="item wordpress">
+          <img src="images/8.png" alt="">
+        </div>
+        <div class="item wordpress">
+          <img src="images/1.png" alt="">
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--JS links-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/jquery.ripples-min.js"></script>
+    <script>
+      $('.banner').ripples({
+                  dropRadius: 10,
+                  perturbance: 0.02
+                });
+    </script>
+    <script src="js/jquery.circleGraphic.js"></script>
+   <script type="text/javascript">
+  $('.circleGraphic1').circleGraphic();
+  $('.circleGraphic2').circleGraphic({'color':'#fff'});
+  $('.circleGraphic3').circleGraphic({'color':'#fff'});
+
+  $('.circleGraphic4').circleGraphic({'color':'#fff'});
+
+</script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script>
+     $('.portfolio-item').isotope({
+        itemSelector:'.item',
+        layoutMode:'fitRows'
+});
+
+$('.portfolio-menu ul li').click(function() {
+   $('.portfolio-menu ul li').removeClass('active');
+   $(this).addClass('active');
+
+   var selector = $ (this) .attr('data-filter');
+   $('.portfolio-item').isotope({
+    filter: selector
+   });
+   return false;
+});
+    </script>
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/custom.js"></script>
+    
+    
+  </body>
+</html>
