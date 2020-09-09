@@ -76,6 +76,7 @@ h1{
 }
 .portfolio-item{
 	width: 100%;
+	overflow: hidden;
 }
 .portfolio-item .item{
 	width: 303px;
